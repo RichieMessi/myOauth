@@ -9,7 +9,7 @@ const passport          = require('passport')
 const session           = require('express-session')
 const Schema            = mongoose.Schema
 
-
+const PORT = process.env.port || 3000
 
 const app = express()
 
@@ -48,4 +48,4 @@ app.get('/', (req, res) => res.render('home', {user: req.user}))
 
 
 // listening to port
-app.listen(8080, () => console.log('Listening at port 8080'))
+app.listen(PORT, () => console.log('Listening at port 3000'))
